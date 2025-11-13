@@ -34,7 +34,7 @@ export function Overview() {
   )
 }
 
-export function Trailer() {
+export function Trailer({ onOpen }) {
   return (
     <section id="trailer" className="relative bg-black py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -42,7 +42,7 @@ export function Trailer() {
         <p className="mt-4 text-white/70 max-w-3xl">Turn the lights off. Headphones on. Dive into a dimensional rift of sound and picture.</p>
         <div className="mt-8 relative rounded-2xl overflow-hidden border border-white/10">
           <div className="aspect-video bg-gradient-to-br from-fuchsia-600/20 to-cyan-500/20 grid place-items-center">
-            <button className="group inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-black font-semibold shadow-xl hover:scale-105 transition">
+            <button onClick={onOpen} className="group inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-black font-semibold shadow-xl hover:scale-105 transition">
               <Play className="group-hover:scale-110 transition" /> Play Teaser
             </button>
           </div>
