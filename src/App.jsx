@@ -1,26 +1,22 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import { Overview, Trailer, Characters, VFX } from './components/Sections'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-black text-white">
+      <Navbar />
+      <Hero />
+      <Overview />
+      <Trailer />
+      <Characters />
+      <VFX />
+      <footer className="bg-black/80 border-t border-white/10 py-12">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-white/60">Fan site concept for Season 5 • High-motion immersive experience</div>
+          <a href="#hero" className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:scale-105 transition">Back to top</a>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
